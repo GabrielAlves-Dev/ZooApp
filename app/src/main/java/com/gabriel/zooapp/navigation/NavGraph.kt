@@ -22,7 +22,7 @@ fun NavGraph() {
         composable("animal/{animalName}") { backStackEntry ->
             val animalName = backStackEntry.arguments?.getString("animalName")
             val selectedAnimal = animalList.first { it.name == animalName }
-            AnimalScreen(selectedAnimal)
+            AnimalScreen(selectedAnimal, navController)
         }
     }
 }
